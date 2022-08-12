@@ -63,7 +63,7 @@ def request_heroes_powerstats(hero_names, data = []):
         data = request_all_data()
     
     heroes_data = []
-    # цикл по всем именам героев из параметра
+    # цикл по всем именам героев из параметра функции
     for hero in hero_names:
         # определение ID героя
         hero_id = get_hero_id(data, hero)
@@ -79,7 +79,7 @@ def request_heroes_powerstats(hero_names, data = []):
     # возвращаем итоговый список
     return heroes_data
 
-# Поиск лучшегогероя по указанному стату
+# Поиск лучшего героя по указанному стату
 # PARAMS
 #   HERO_NAMES - список имен героев (['name1', 'name2', ...])
 #   POWERSTAT - стат героя ('intelligence', 'strength', 'speed', 'durability', 'power', 'combat')
@@ -104,9 +104,9 @@ def __main__():
     #data = res.json()
     #pprint(data)
    
-    stat = 'intelligence'   # 'intelligence', 'strength', 'speed', 'durability', 'power', 'combat'
     heroes = ['Hulk', 'Captain America', 'Thanos', '111', 'Batman']
-
+    stat = 'intelligence'   # 'intelligence', 'strength', 'speed', 'durability', 'power', 'combat'
+ 
     res = request_heroes_powerstats(heroes)
     pprint(res)
  
